@@ -16,6 +16,6 @@ public class DirectedEdge extends Edge{
     }
 
     public String toString() {
-        return super.toString() + ", source=" + source;
+        return super.toString() + ", source=" + this.source;
     }
 }
