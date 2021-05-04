@@ -1,3 +1,5 @@
+package graph;
+
 public interface Graph {
     public int nbOfVertices();
     public int nbOfEdges();

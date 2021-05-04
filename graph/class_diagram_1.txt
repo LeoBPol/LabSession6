@@ -1,5 +1,5 @@
 @startuml
-class           Vertex{
+class           graph.Vertex{
 -id: int
 -info: Object
 -color: String
@@ -12,56 +12,56 @@ class           Vertex{
 +toString(): String
 }
 
-class           DirectedEdge extends Edge{
+class           graph.DirectedEdge extends graph.Edge{
 -source: int
-+getSource(): Vertex
-+getSink(): Vertex
++getSource(): graph.Vertex
++getSink(): graph.Vertex
 }
 
-class           UndirectedEdge extends Edge{
-+getEnds(): Vertex []
+class           graph.UndirectedEdge extends graph.Edge{
++getEnds(): graph.Vertex []
 }
 
-class           TestGraph{
+class           graph.TestGraph{
 +main()
 }
 
-abstract class           Edge{
+abstract class           graph.Edge{
 -id: int
 -color: String
--ends: Vertex[2]
+-ends: graph.Vertex[2]
 -value: double
 +getId(): int
 +setId()
 +getColor(): String
 +setColor()
-+getEnds(): Vertex[2]
++getEnds(): graph.Vertex[2]
 +setEnds()
 +getValue(): double
 +setValue()
 }
 
-interface Graph{
+interface graph.Graph{
 +nbOfVertices():int
 +nbOfEdges():int
-+addVertex(Vertex)
-+addEdge(Vertex,Vertex,EdgeKind)
-+isConnected(Vertex,Vertex):boolean
-+isConnected(Vertex,Vertex):boolean
-+getEdges(Vertex, Vertex): Edge[]
-+getEdges(): Edge []
-+getVertices(): Vertex []
-+getNeighborEdges(Vertex): Edge []
++addVertex(graph.Vertex)
++addEdge(graph.Vertex,graph.Vertex,graph.EdgeKind)
++isConnected(graph.Vertex,graph.Vertex):boolean
++isConnected(graph.Vertex,graph.Vertex):boolean
++getEdges(graph.Vertex, graph.Vertex): graph.Edge[]
++getEdges(): graph.Edge []
++getVertices(): graph.Vertex []
++getNeighborEdges(graph.Vertex): graph.Edge []
 }
 
-enum EdgeKind{
+enum graph.EdgeKind{
 +states : String[]
 }
 
-Edge --o "2" Vertex
-TestGraph ..> Vertex
-TestGraph ..> Edge
-Graph ..> EdgeKind
-Graph ..> Vertex
-Graph ..> Edge
+graph.Edge --o "2" graph.Vertex
+graph.TestGraph ..> graph.Vertex
+graph.TestGraph ..> graph.Edge
+graph.Graph ..> graph.EdgeKind
+graph.Graph ..> graph.Vertex
+graph.Graph ..> graph.Edge
 @enduml
