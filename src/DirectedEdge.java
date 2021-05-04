@@ -14,4 +14,8 @@ public class DirectedEdge extends Edge{
     public Vertex getSink() {
         return super.getEnds()[1-this.source];
     }
+
+    public String toString() {
+        return super.toString() + ", source=" + source;
+    }
 }

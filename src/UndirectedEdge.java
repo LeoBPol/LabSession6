@@ -7,4 +7,8 @@ public class UndirectedEdge extends Edge{
     public Vertex[] getEnds() {
         return super.getEnds();
     }
+
+    public String toString() {
+        return super.toString();
+    }
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public abstract class Edge{
     private int id;
     private String color;
@@ -41,5 +43,13 @@ public abstract class Edge{
 
     public void setEnds(Vertex[] ends) {
         this.ends = ends;
+    }
+
+    @Override
+    public String toString() {
+        return "id=" + id +
+                ", color='" + color +
+                ", value=" + value +
+                ", ends=" + Arrays.toString(ends);
     }
 }
