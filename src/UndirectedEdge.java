@@ -4,5 +4,7 @@ public class UndirectedEdge extends Edge{
         super(id,color,value,ends);
     }
 
-    public
+    public Vertex[] getEnds() {
+        return super.getEnds();
+    }
 }
