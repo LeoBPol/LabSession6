@@ -1,3 +1,5 @@
+package graph;
+
 public class Vertex{
     private int id;
     private Object info;
@@ -34,7 +36,7 @@ public class Vertex{
     }
 
     public String toString() {
-        return "Vertex{" +
+        return "graph.Vertex{" +
                 "id=" + id +
                 ", info=" + info +
                 ", color='" + color + '\'' +
