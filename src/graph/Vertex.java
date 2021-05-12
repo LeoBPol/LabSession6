@@ -6,6 +6,8 @@ public class Vertex{
     private String color;
 
     public Vertex(int id, Object info, String color) {
+        if (id < 0)
+          throw new IllegalArgumentException("id of vertex must be non-negative");
         this.id = id;
         this.info = info;
         this.color = color;
@@ -16,6 +18,8 @@ public class Vertex{
     }
 
     public void setId(int id) {
+        if (id < 0)
+          throw new IllegalArgumentException("id of vertex must be non-negative");
         this.id = id;
     }
 

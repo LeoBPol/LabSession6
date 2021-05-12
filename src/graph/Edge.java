@@ -2,13 +2,15 @@ package graph;
 
 import java.util.Arrays;
 
-public abstract class Edge{
+public abstract class Edge {
     private int id;
     private String color;
     private double value;
     private Vertex[] ends;
 
     public Edge(int id, String color, double value, Vertex[] ends) {
+        if (id < 0)
+          throw new IllegalArgumentException("id of edge must be positive");
         this.id = id;
         this.color = color;
         this.value = value;
@@ -20,6 +22,8 @@ public abstract class Edge{
     }
 
     public void setId(int id) {
+        if (id < 0)
+          throw new IllegalArgumentException("id of edge must be positive");
         this.id = id;
     }
 

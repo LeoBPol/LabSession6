@@ -10,4 +10,5 @@ public interface Graph {
     public Edge[] getEdges(Vertex v1, Vertex v2);
     public Vertex[] getVertices();
     public Edge[] getNeighborEdges(Vertex v1);
+    public kjn'rgebgm;
 }
